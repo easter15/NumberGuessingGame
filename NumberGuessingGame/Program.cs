@@ -1,5 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-
+﻿
 {
     Random random = new Random();
     bool playAgain = true;
@@ -19,23 +18,23 @@
 
         while (guess != number)
         {
-            Console.WriteLine("Guess a number between " + min + "-" + max + ": ");
+            Console.WriteLine("Guess a number between " + min + " - " + max + ": ");
             guess = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Guess: " + guess);
+            Console.WriteLine("Your Guess: " + guess);
 
             if (guess > number)
             {
-                Console.WriteLine(guess + " is to high!");
+                Console.WriteLine(guess + " is to high!\n");
             }
             else if (guess < number)
             {
-                Console.WriteLine(guess + " is to low!");            
+                Console.WriteLine(guess + " is to low!\n");            
             }
             guesses++;
             
         }
-        Console.WriteLine("Number: " + number);
-        Console.WriteLine("YOU WIN!");
+        Console.WriteLine(number + " is the correct number!");
+        Console.WriteLine("\nYOU WIN!");
         Console.WriteLine("It took you " + guesses + " guesses");
 
         Console.WriteLine("Would you like to play agin? (Y/N): ");
